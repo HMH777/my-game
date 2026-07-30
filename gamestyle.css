@@ -1,0 +1,126 @@
+/* Global stuff */
+.body {
+  background-color: grey;
+  font-family: "Nunito", sans-serif;
+}
+/* Visibility improvements */
+.separation {
+  height: 5px;
+  background-color: black;
+  border: 0px;
+}
+/* Aligments */
+.containernumber {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 1;
+  height: 150px;
+}
+/* Points marker */
+#number {
+  margin: 5px;
+  font-size: xx-large;
+}
+/* Button stuff */
+.bgbutton {
+  margin: auto;
+  box-shadow: 6px 6px 5px rgb(20, 20, 20);
+  height: 250px;
+  width: 250px;
+  border: 5px solid black;
+  border-radius: 50%;
+  background-color: rgb(173, 173, 173);
+  padding: 30px;
+}
+#button {
+  width: 250px;
+  height: 250px;
+  box-shadow:
+    4px 4px 5px rgb(30, 0, 0),
+    4px 4px 5px rgba(10, 10, 10, 0.5);
+  border: 8px solid black;
+  border-radius: 50%;
+  background-color: red;
+  font-size: xx-large;
+  font-family: "Nunito", sans-serif;
+  font-weight: bolder;
+  padding: 10px;
+}
+#button:active {
+  background-color: rgb(150, 0, 0);
+  box-shadow:
+    2px 2px 5px rgb(30, 0, 0),
+    3px 3px 5px rgba(10, 10, 10, 0.5);
+}
+/* Aligments */
+.upgrades {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-content: center;
+  height: 60px;
+  margin-top: 150px;
+}
+/* Upgrades 1 to 3 stuff */
+#upgrade1 {
+  height: 100px;
+  width: 200px;
+  border: 4px solid black;
+  background-color: rgb(200, 200, 200);
+  box-shadow: 3px 3px 5px black;
+  border-radius: 10px;
+  font-size: medium;
+}
+#upgrade2 {
+  height: 100px;
+  width: 200px;
+  border: 4px solid black;
+  background-color: rgb(200, 200, 200);
+  box-shadow: 3px 3px 5px black;
+  border-radius: 10px;
+  font-size: medium;
+}
+#upgrade3 {
+  height: 100px;
+  width: 200px;
+  border: 4px solid black;
+  border-radius: 10px;
+  background-color: rgb(200, 200, 200);
+  box-shadow: 3px 3px 5px black;
+  font-size: medium;
+}
+#upgrade4 {
+  height: 100px;
+  width: 200px;
+  border: 4px solid black;
+  background-color: rgb(200, 200, 200);
+  box-shadow: 3px 3px 5px black;
+  border-radius: 10px;
+  font-size: medium;
+}
+.version {
+  display: flex;
+  height: 50px;
+  justify-content: end;
+  align-items: flex-end;
+  margin-top: 20px;
+}
+#upgrade1:active {
+  background-color: rgb(150, 150, 150);
+  box-shadow: 2px 2px 5px black;
+}
+#upgrade2:active {
+  background-color: rgb(150, 150, 150);
+  box-shadow: 2px 2px 5px black;
+}
+#upgrade3:active {
+  background-color: rgb(150, 150, 150);
+  box-shadow: 2px 2px 5px black;
+}
+#upgrade4:active {
+  background-color: rgb(150, 150, 150);
+  box-shadow: 2px 2px 5px black;
+}
+/* Aligments */
+.text {
+  text-shadow: 3px 3px 5px black;
+}
