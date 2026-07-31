@@ -3,7 +3,7 @@
 This is my first game, so there might be some bugs.
 
 ## Features
-- Button clicking
+- Button that gives points on click
 - Points per second (PPS)
 - 4 upgrades
 
