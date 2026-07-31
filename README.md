@@ -11,3 +11,6 @@ This is my first game, so there might be some bugs.
 There's a giant button on the screen that says "+1".
 
 What do you think you need to do?
+
+# to play, access:
+- https://hmh777.github.io/my-game/
