@@ -85,11 +85,12 @@ upgrade3.onclick = function () {
   }
 };
 upgrade4.onclick = function () {
-  if (levelUpgrade4 === 1n || levelUpgrade1 < 20n) return;
+  if (levelUpgrade4 >= 1n || levelUpgrade1 < 20n) return;
   if (points >= upgrade4Cost) {
     levelUpgrade4 = levelUpgrade4 + 1n;
     clickPower = clickPower * 4n;
     upgrade4.textContent = `4x click power, cost: MAX`;
+    button.textContent = `+${formatBigInt(clickPower)}`;
   }
 };
 setInterval(() => {
