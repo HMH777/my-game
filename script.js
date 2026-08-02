@@ -1,6 +1,7 @@
 let points = 0n;
 let clickPower = 1n;
 let upgrade1Cost = 25n;
+let adder = 0n;
 let levelUpgrade1 = 0n;
 let multiplier = 1n;
 let upgrade2Cost = 300n;
@@ -40,8 +41,8 @@ upgrade1.onclick = function () {
   if (points >= upgrade1Cost) {
     points = points - upgrade1Cost;
     levelUpgrade1 = levelUpgrade1 + 1n;
-    clickPower = clickPower + 1n;
-    clickPower = clickPower * multiplier;
+    adder = adder + 1;
+    clickPower = (1n + adder) * multiplier;
     number.textContent = `points: ${formatBigInt(points)}`;
     button.textContent = `+${formatBigInt(clickPower)}`;
     if (levelUpgrade1 < 20n) {
@@ -58,7 +59,7 @@ upgrade2.onclick = function () {
     points = points - upgrade2Cost;
     levelUpgrade2 = levelUpgrade2 + 1n;
     multiplier = multiplier * 2n;
-    clickPower = clickPower * multiplier;
+    clickPower = (1n + adder) * multiplier;
     number.textContent = `points: ${formatBigInt(points)}`;
     button.textContent = `+${formatBigInt(clickPower)}`;
     if (levelUpgrade2 < 3n) {
