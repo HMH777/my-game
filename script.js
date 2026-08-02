@@ -58,7 +58,7 @@ upgrade2.onclick = function () {
     points = points - upgrade2Cost;
     levelUpgrade2 = levelUpgrade2 + 1n;
     multiplier = multiplier * 2n;
-    clickPower = (1n + upgrade1Boost) * multiplier;
+    clickPower = clickPower * multiplier;
     number.textContent = `points: ${formatBigInt(points)}`;
     button.textContent = `+${formatBigInt(clickPower)}`;
     if (levelUpgrade2 < 3n) {
@@ -88,6 +88,7 @@ upgrade4.onclick = function () {
   if (points >= upgrade4Cost) {
     levelUpgrade4 = levelUpgrade4 + 1n;
     multiplier = multiplier * 4n;
+    clickPower = clickPower * multiplier;
     points = points - upgrade4Cost;
     upgrade4.textContent = `4x click power, cost: MAX`;
     button.textContent = `+${formatBigInt(clickPower)}`;
