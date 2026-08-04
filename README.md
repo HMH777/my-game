@@ -12,5 +12,8 @@ There's a giant button on the screen that says "+1".
 
 What do you think you need to do?
 
+## Credits:
+- Thanks for my 3 friends for playtesting the game!
+
 # to play, access:
 - https://hmh777.github.io/my-game/
