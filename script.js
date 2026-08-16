@@ -14,12 +14,10 @@ let bonusPower = 0n;
 let levelUpgrade5 = 0n;
 let levelUpgrade7 = 0n;
 let levelUpgrade8 = 0n;
-let levelUpgrade9 = 0n;
 let levelUpgrade6 = 0n;
 let upgrade5Cost = 35000n;
 let upgrade7Cost = 10000n;
 let upgrade8Cost = (7n * (10n ** 5n)) + 50000n;
-let upgrade9Cost = 5n * (10n ** 6n);
 let upgrade6Cost = 30000n;
 let upgrade4Cost = 50000n;
 let levelUpgrade4 = 0n;
@@ -63,9 +61,7 @@ const save = {
       clickPowerPercentage: clickPowerPercentage.toString(),
       bonusPower: bonusPower.toString(),
       upgrade8Cost: upgrade8Cost.toString(),
-      upgrade9Cost: upgrade9Cost.toString(),
       levelUpgrade8: levelUpgrade8.toString(),
-      levelUpgrade9: levelUpgrade9.toString(),
     };
     localStorage.setItem("gameSave", JSON.stringify(data));
   },
@@ -96,10 +92,8 @@ const save = {
     upgrade7Cost = BigInt(data.upgrade7Cost);
     clickPowerPercentage = BigInt(data.clickPowerPercentage);
     bonusPower = BigInt(data.bonusPower);
-    upgrade8Cost = BigInt(data.upgrade8Cost)
-    upgrade9Cost = BigInt(data.upgrade9Cost);
+    upgrade8Cost = BigInt(data.upgrade8Cost);
     levelUpgrade8 = BigInt(data.levelUpgrade8);
-    levelUpgrade9 = BigInt(data.levelUpgrade9);
     updateUI();
   },
   deleteSave() {
