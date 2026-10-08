@@ -1,26 +1,35 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
     <title>Clicker Game | Settings</title>
-</head>
-<body class="body">
+  </head>
+  <body class="body">
     <div class="settingsText">
-        <h1 class="tabName">Settings</h1>
+      <h1 id="tabName">Settings</h1>
     </div>
-    <hr class="separation">
+    <hr class="separation" />
     <nav class="navbar">
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="prestige.html">???</a></li>
-        <li><a href="settings.html">Settings</a></li>
+        <li><a href="index.html">🏠</a></li>
+        <li><a href="prestige.html" id="prestigeTab">???</a></li>
+        <li><a href="acheivements.html">🏆</a></li>
+        <li><a href="settings.html">⚙️</a></li>
       </ul>
     </nav>
     <div class="delete">
-        <button id="deleteButton">wipe save</button>
+      <button id="deleteButton">wipe save</button>
     </div>
+    <select id="languageSelector">
+      <option class="option" value="en">English</option>
+      <option class="option" value="pt">Português</option>
+    </select>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
