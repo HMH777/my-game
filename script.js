@@ -459,6 +459,12 @@ function updateUI() {
         } else {
           prestigeUpgrade1.textContent = "5x click power, cost: MAX";
         }
+      } else {
+        if (language === "en") {
+          prestigeUpgrade1.textContent = "???, unlock prestige to see";
+        } else {
+          prestigeUpgrade1.textContent = "???, desbloqueie prestígio para ver";
+        }
       }
     } else {
       if (prestigeUnlocked) {
@@ -466,6 +472,12 @@ function updateUI() {
           prestigeUpgrade1.textContent = `5x poder de clique, custo: ${formatBigInt(prestigeUpgrade1Cost)}`;
         } else {
           prestigeUpgrade1.textContent = "5x poder de clique, custo: MÁXIMO";
+        }
+      } else {
+        if (language === "en") {
+          prestigeUpgrade1.textContent = "???, unlock prestige to see";
+        } else {
+          prestigeUpgrade1.textContent = "???, desbloqueie prestígio para ver";
         }
       }
     }
@@ -485,17 +497,31 @@ function updateUI() {
           prestigeUpgrade2.textContent = "3x pontos por segundo, custo: MÁXIMO";
         }
       }
+    } else {
+      if (language === "en") {
+        prestigeUpgrade1.textContent = "???, unlock prestige to see";
+      } else {
+        prestigeUpgrade1.textContent = "???, desbloqueie prestígio para ver";
+      }
     }
   }
   if (prestigeUpgrade3) {
     if (prestigeUnlocked) {
-      if (levelPrestigeUpgrade3 === 0) {
+      if (
+        levelPrestigeUpgrade3 === 0n &&
+        levelPrestigeUpgrade1 === 1n &&
+        levelPrestigeUpgrade2 === 1n
+      ) {
         if (language === "en") {
           prestigeUpgrade3.textContent = `2x points per second and 2x click power, cost: ${formatBigInt(prestigeUpgrade3Cost)}`;
         } else {
           prestigeUpgrade3.textContent = `2x pontos por segundo e 2x poder de clique, custo: ${formatBigInt(prestigeUpgrade3Cost)}`;
         }
-      } else if (levelPrestigeUpgrade3 === 1) {
+      } else if (
+        levelPrestigeUpgrade3 === 1n &&
+        levelPrestigeUpgrade1 === 1n &&
+        levelPrestigeUpgrade2 === 1n
+      ) {
         if (language === "en") {
           prestigeUpgrade3.textContent = `2x points per second and 2x click power, cost: MAX`;
         } else {
@@ -507,6 +533,12 @@ function updateUI() {
         } else {
           prestigeUpgrade3.textContent = `mmaximize as melhorias de prestígio 1 e 2 para desbloquear`;
         }
+      }
+    } else {
+      if (language === "en") {
+        prestigeUpgrade1.textContent = "???, unlock prestige to see";
+      } else {
+        prestigeUpgrade1.textContent = "???, desbloqueie prestígio para ver";
       }
     }
   }
@@ -549,6 +581,7 @@ function prestige() {
   upgrade4Cost = 50000n;
   levelUpgrade4 = 0n;
   levelUpgrade3 = 0n;
+  save.saveGame();
 }
 function getPPS() {
   return ((clickPower * PPSPercentage) / 100n) * PPSMultiplier;
